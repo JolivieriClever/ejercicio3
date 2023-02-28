@@ -1,3 +1,5 @@
 {
-  "your": "json config here"
+  "name": "mi-paquete",
+  "version": "6.6.6",
+  "author": "JP"
 }
