@@ -10,11 +10,16 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with: 
-          node-version: 12
+          node-version: 14
       - run: npm install
-     #- run: npm test
+      - run: npm pack
+      - run: ls
+      - uses: actions/upload-artifact@v2
+        with:
+          name: npm-package
+          path: https://npm.pkg.github.com
       
   publish:
     needs: build
