@@ -18,10 +18,10 @@ jobs:
       
   publish:
     needs: build
-    runs-on: ubuntu-latets
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-mpde@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com
